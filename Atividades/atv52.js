@@ -8,3 +8,10 @@ Você escreverá uma função que recebe um objeto como primeiro parâmetro e, c
 nome de uma propriedade contida nesse objeto. Em seguida, retorne uma cópia desse objeto sem a
 propriedade especificada no segundo parâmetro. */
 
+function remover(objeto, nome) {
+    const copia = Object.assign({}, objeto)
+    delete copia[nome]
+    console.log(copia) 
+}
+    
+remover({a: 1, b: 2}, "a")
